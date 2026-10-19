@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>系统实施运维 · 学习路径 | 从入门到专家的完整地图</title>
+<meta name="description" content="系统实施运维工程师完整学习路径：8 个阶段、17 大知识模块、147 道面试题、60+ 权威资源链接，涵盖 Linux、网络、数据库、容器、云原生、监控、安全合规、实施交付与故障排查。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap inner">
+    <a class="logo" href="index.html">
+      <span class="mark">⚙</span>
+      <span>系统实施运维<small>LEARNING PATH</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="active">学习路径</a>
+      <a href="knowledge.html">知识点</a>
+      <a href="interview.html">面试题库</a>
+      <a href="resources.html">资源库</a>
+      <a href="job.html">岗位对标</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" title="切换主题">🌙</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <span class="eyebrow">SYSTEM IMPLEMENTATION &amp; OPERATIONS</span>
+    <h1>从「装环境」到「扛住生产」<br>系统实施运维 <em>完整学习路径</em></h1>
+    <p class="lead">
+      这是一份为<strong>系统实施 / 运维工程师</strong>准备的全景地图：8 个递进阶段、17 大知识模块、
+      117 道分级面试题、60+ 条官方文档与实战文章链接。
+      每个阶段都给出「学什么、练什么、能干什么、用什么自检」，可直接当作 6 个月成长计划执行。
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#path">开始看学习路径 →</a>
+      <a class="btn" href="interview.html">直接刷面试题</a>
+      <a class="btn" href="knowledge.html">查知识点手册</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>8</b><span>成长阶段</span></div>
+      <div class="stat"><b>17</b><span>知识模块</span></div>
+      <div class="stat"><b>147</b><span>面试题（含答案）</span></div>
+      <div class="stat"><b>60+</b><span>权威资源链接</span></div>
+      <div class="stat"><b>24</b><span>周进阶计划</span></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="path" style="padding-top:40px">
+    <div class="section-head">
+      <h2>八阶段学习路径</h2>
+      <p>按顺序走，别跳级——每一阶段都是下一阶段的地基</p>
+    </div>
+
+    <ol class="timeline">
+
+      <!-- 阶段 1 -->
+      <li class="tl-item">
+        <span class="tl-node">1</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>计算机与网络基础</h3>
+            <span class="tl-meta">第 1–2 周 · 入门</span>
+            <span class="tag green">地基</span>
+          </div>
+          <p class="tl-goal">目标：能说清「一个 HTTP 请求从浏览器到数据库经历了什么」，能自己装一台虚拟机并配好网络。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">CPU / 内存 / 磁盘 / IO 的关系</span>
+                <span class="tag">进程与线程、上下文切换</span>
+                <span class="tag">TCP/IP 四层模型</span>
+                <span class="tag">三次握手与四次挥手</span>
+                <span class="tag">DNS 解析流程</span>
+                <span class="tag">HTTP 状态码语义</span>
+                <span class="tag">子网掩码与路由</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">装 CentOS/Ubuntu 虚拟机</span>
+                <span class="tag cyan">用 ping / traceroute / curl 验证网络</span>
+                <span class="tag cyan">tcpdump 抓一次 HTTP 请求</span>
+                <span class="tag cyan">用 dig 观察 DNS 递归过程</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能画出请求全链路图</span>
+                <span class="tag warn">能解释 502 和 504 的区别</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 2 -->
+      <li class="tl-item">
+        <span class="tl-node">2</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>Linux 系统管理</h3>
+            <span class="tl-meta">第 3–6 周 · 入门 → 初级</span>
+            <span class="tag green">吃饭本领</span>
+          </div>
+          <p class="tl-goal">目标：不靠图形界面完成日常全部操作；能在无外网的机器上装好一套运行环境。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">文件系统与目录规范（FHS）</span>
+                <span class="tag">权限、umask、ACL、sudo</span>
+                <span class="tag">用户与用户组管理</span>
+                <span class="tag">软件包管理 yum/apt</span>
+                <span class="tag">systemd 服务管理</span>
+                <span class="tag">日志体系 journald / rsyslog</span>
+                <span class="tag">磁盘分区与 LVM</span>
+                <span class="tag">定时任务 cron</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">写 5 个以上实用 Shell 脚本</span>
+                <span class="tag cyan">用 LVM 在线扩容一次</span>
+                <span class="tag cyan">配一个 systemd 自启服务</span>
+                <span class="tag cyan">logrotate 切割日志</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能徒手定位磁盘是谁占满的</span>
+                <span class="tag warn">能说清 inode 是什么</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 3 -->
+      <li class="tl-item">
+        <span class="tl-node">3</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>Shell 与自动化脚本</h3>
+            <span class="tl-meta">第 5–8 周 · 初级</span>
+            <span class="tag blue">效率分水岭</span>
+          </div>
+          <p class="tl-goal">目标：把重复操作变成脚本；从「手动运维」跨到「工具运维」。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">变量、数组、条件、循环</span>
+                <span class="tag">函数与模块化</span>
+                <span class="tag">管道与文本三剑客 grep/sed/awk</span>
+                <span class="tag">退出码与错误处理 set -euo pipefail</span>
+                <span class="tag">Python 基础（运维视角）</span>
+                <span class="tag">paramiko / requests 调用</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">批量巡检脚本（CPU/磁盘/证书）</span>
+                <span class="tag cyan">日志分析 awk 脚本</span>
+                <span class="tag cyan">Python 批量 SSH 执行命令</span>
+                <span class="tag cyan">脚本结果推送到钉钉/企微</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">脚本能在异常时不误删数据</span>
+                <span class="tag warn">一条 awk 能出统计报表</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 4 -->
+      <li class="tl-item">
+        <span class="tl-node">4</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>服务部署与中间件</h3>
+            <span class="tl-meta">第 7–12 周 · 初级 → 中级</span>
+            <span class="tag blue">实施核心</span>
+          </div>
+          <p class="tl-goal">目标：独立部署一套「Nginx + 应用 + MySQL + Redis」的完整业务系统，并完成参数调优。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">Nginx 反向代理 / 负载均衡 / 限流</span>
+                <span class="tag">Tomcat 与 JVM 基础参数</span>
+                <span class="tag">MySQL 安装、备份恢复、主从复制</span>
+                <span class="tag">Redis 部署、持久化、哨兵</span>
+                <span class="tag">消息队列 Kafka / RabbitMQ</span>
+                <span class="tag">HTTPS 证书配置与续期</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">搭一套主从 + 读写分离</span>
+                <span class="tag cyan">配置 Nginx 灰度与限流</span>
+                <span class="tag cyan">做一次 binlog 时间点恢复</span>
+                <span class="tag cyan">压测一台 Nginx 找瓶颈</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能解释主从延迟的成因</span>
+                <span class="tag warn">能背出 Nginx 502 排查顺序</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 5 -->
+      <li class="tl-item">
+        <span class="tl-node">5</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>监控、日志与可观测性</h3>
+            <span class="tl-meta">第 11–16 周 · 中级</span>
+            <span class="tag violet">从救火到防火</span>
+          </div>
+          <p class="tl-goal">目标：系统出问题前你就知道；出问题后 5 分钟内能定位到是哪个环节。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">Prometheus + Exporter + PromQL</span>
+                <span class="tag">Grafana 看板设计</span>
+                <span class="tag">Alertmanager 告警分级与降噪</span>
+                <span class="tag">Zabbix 传统监控</span>
+                <span class="tag">ELK / Loki 日志平台</span>
+                <span class="tag">四种黄金指标与 SLO</span>
+                <span class="tag">链路追踪与 traceId</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">部署 node_exporter + Grafana 大盘</span>
+                <span class="tag cyan">写 10 条有用的告警规则</span>
+                <span class="tag cyan">搭一套 Filebeat→ES→Kibana</span>
+                <span class="tag cyan">做一次告警风暴演练</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能从大盘 3 步定位到根因</span>
+                <span class="tag warn">告警零噪音、都有 runbook</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 6 -->
+      <li class="tl-item">
+        <span class="tl-node">6</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>容器与云原生</h3>
+            <span class="tl-meta">第 15–20 周 · 中级</span>
+            <span class="tag violet">当下主流</span>
+          </div>
+          <p class="tl-goal">目标：把一套传统部署的应用容器化并跑在 K8s 上，能独立排查 Pod 异常。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">镜像分层与 Dockerfile 优化</span>
+                <span class="tag">容器网络与存储卷</span>
+                <span class="tag">K8s 核心对象（Pod/Deploy/Svc/Ingress）</span>
+                <span class="tag">探针、资源配额与 QoS</span>
+                <span class="tag">Helm 与配置管理</span>
+                <span class="tag">K8s 排障四板斧</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">写多阶段构建 Dockerfile</span>
+                <span class="tag cyan">kubeadm 搭三节点集群</span>
+                <span class="tag cyan">迁移一个无状态服务上 K8s</span>
+                <span class="tag cyan">模拟 Pending / CrashLoop 排查</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能讲清 requests/limits 的后果</span>
+                <span class="tag warn">能说出 Pod 起不来的 6 种原因</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 7 -->
+      <li class="tl-item">
+        <span class="tl-node">7</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>云平台、自动化与 CI/CD</h3>
+            <span class="tl-meta">第 19–24 周 · 中级 → 高级</span>
+            <span class="tag pink">规模化能力</span>
+          </div>
+          <p class="tl-goal">目标：一人管理上百台机器；一次提交自动构建、发布、回滚。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">云上 VPC / 安全组 / SLB / 对象存储</span>
+                <span class="tag">Ansible 批量配置管理</span>
+                <span class="tag">Jenkins / GitLab CI Pipeline</span>
+                <span class="tag">制品与镜像仓库</span>
+                <span class="tag">灰度发布与回滚策略</span>
+                <span class="tag">IaC（Terraform）与配置分离</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">Ansible 一键初始化 50 台机器</span>
+                <span class="tag cyan">搭 Jenkins 自动发布到测试环境</span>
+                <span class="tag cyan">用 Terraform 创建一套 VPC</span>
+                <span class="tag cyan">做一次蓝绿发布演练</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">发布全流程无人值守</span>
+                <span class="tag warn">回滚时间 &lt; 5 分钟</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- 阶段 8 -->
+      <li class="tl-item">
+        <span class="tl-node">8</span>
+        <div class="tl-body">
+          <div class="tl-head">
+            <h3>安全合规、实施交付与稳定性体系</h3>
+            <span class="tl-meta">第 23 周起 · 高级 → 专家</span>
+            <span class="tag pink">体系与影响力</span>
+          </div>
+          <p class="tl-goal">目标：能主导一个项目的交付与运维体系设计，对客户/领导讲清方案与风险。</p>
+          <div class="tl-cols">
+            <div class="tl-col">
+              <h4>核心知识</h4>
+              <div class="tags">
+                <span class="tag">主机加固与基线</span>
+                <span class="tag">等保 2.0 三级要求</span>
+                <span class="tag">应急响应与取证</span>
+                <span class="tag">实施方法论（调研→部署→验收）</span>
+                <span class="tag">容量规划与成本优化</span>
+                <span class="tag">故障复盘与 SRE 体系</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>动手练习</h4>
+              <div class="tags">
+                <span class="tag cyan">写一份主机加固基线文档</span>
+                <span class="tag cyan">做一次渗透后的应急演练</span>
+                <span class="tag cyan">输出一份完整实施方案</span>
+                <span class="tag cyan">写一份真实故障复盘</span>
+              </div>
+            </div>
+            <div class="tl-col">
+              <h4>自检标准</h4>
+              <div class="tags">
+                <span class="tag warn">能独立应对客户现场突发</span>
+                <span class="tag warn">能讲清一套运维体系的建设顺序</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="wrap" style="padding-top:30px">
+    <div class="section-head">
+      <h2>技能矩阵</h2>
+      <p>按岗位层级对照，看看自己卡在哪一档</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>能力域</th><th>初级（0–1 年）</th><th>中级（1–3 年）</th><th>高级（3–5 年+）</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>操作系统</strong></td>
+            <td>会装系统、会用常用命令、能看日志</td>
+            <td>性能分析、内核参数调优、故障定位</td>
+            <td>系统性稳定性设计与容量规划</td>
+          </tr>
+          <tr>
+            <td><strong>网络</strong></td>
+            <td>会配 IP、能 ping 通、知道端口</td>
+            <td>抓包分析、代理与负载均衡调优</td>
+            <td>多地域/混合云网络架构设计</td>
+          </tr>
+          <tr>
+            <td><strong>中间件</strong></td>
+            <td>按文档安装与启动</td>
+            <td>参数调优、主从/集群部署、故障处理</td>
+            <td>选型与容量评估、跨机房容灾</td>
+          </tr>
+          <tr>
+            <td><strong>自动化</strong></td>
+            <td>会写简单 Shell</td>
+            <td>Ansible 批量管理、CI/CD 流水线</td>
+            <td>平台化、IaC、研发自助交付</td>
+          </tr>
+          <tr>
+            <td><strong>可观测性</strong></td>
+            <td>会看现成监控大盘</td>
+            <td>能搭监控、写告警规则、建日志平台</td>
+            <td>SLO 体系、可观测性成本治理</td>
+          </tr>
+          <tr>
+            <td><strong>云原生</strong></td>
+            <td>会 docker run</td>
+            <td>独立部署与运维 K8s 集群</td>
+            <td>多集群治理、平台工程</td>
+          </tr>
+          <tr>
+            <td><strong>安全合规</strong></td>
+            <td>知道改密码、关端口</td>
+            <td>主机加固、等保整改落地</td>
+            <td>安全体系设计与审计应对</td>
+          </tr>
+          <tr>
+            <td><strong>实施交付</strong></td>
+            <td>按手册部署、能对接客户</td>
+            <td>独立负责项目、管理客户预期</td>
+            <td>方案设计与项目群管理</td>
+          </tr>
+          <tr>
+            <td><strong>软实力</strong></td>
+            <td>能清晰描述问题</td>
+            <td>能写方案/复盘、跨团队协作</td>
+            <td>技术影响力、带人与决策</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:14px">
+      <b>提示：</b>面试时「中级」是最大的人才缺口区间——把中级要求里的每一项都做出一个真实案例（有数据、有产物），比刷题有效得多。
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:34px">
+    <div class="section-head">
+      <h2>24 周执行计划</h2>
+      <p>每周 8–10 小时，边学边做，产出可写进简历</p>
+    </div>
+    <div class="grid c2">
+      <div class="card">
+        <h3 style="margin-top:0">第 1–6 周 · 打地基</h3>
+        <div class="progress-bar" style="margin-bottom:12px"><i style="width:25%;display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))"></i></div>
+        <ul class="clean">
+          <li>第 1–2 周：操作系统 + 网络基础，画一张请求全链路图</li>
+          <li>第 3–4 周：Linux 命令与权限，装好实验环境（VM + 快照）</li>
+          <li>第 5–6 周：Shell 脚本，产出 3 个可复用脚本</li>
+        </ul>
+        <p class="small dim mb0">产出物：一份《Linux 常用命令速查 + 5 个运维脚本》</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">第 7–12 周 · 会部署</h3>
+        <div class="progress-bar" style="margin-bottom:12px"><i style="width:25%;display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))"></i></div>
+        <ul class="clean">
+          <li>第 7–9 周：Nginx + 应用 + MySQL 完整部署</li>
+          <li>第 10–11 周：Redis、主从复制、备份恢复</li>
+          <li>第 12 周：HTTPS、限流、压测与调优</li>
+        </ul>
+        <p class="small dim mb0">产出物：一套可重复部署的《标准业务系统部署手册》</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">第 13–18 周 · 能看见</h3>
+        <div class="progress-bar" style="margin-bottom:12px"><i style="width:25%;display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))"></i></div>
+        <ul class="clean">
+          <li>第 13–15 周：Prometheus + Grafana + 告警</li>
+          <li>第 16–17 周：ELK 日志平台</li>
+          <li>第 18 周：一次完整的故障演练与复盘</li>
+        </ul>
+        <p class="small dim mb0">产出物：《监控大盘 + 告警规则集 + 排障 runbook》</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">第 19–24 周 · 上规模</h3>
+        <div class="progress-bar" style="margin-bottom:12px"><i style="width:25%;display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))"></i></div>
+        <ul class="clean">
+          <li>第 19–21 周：Docker + K8s 部署与排障</li>
+          <li>第 22–23 周：Ansible + CI/CD 流水线</li>
+          <li>第 24 周：安全加固与等保要求梳理</li>
+        </ul>
+        <p class="small dim mb0">产出物：《容器化迁移案例 + 自动化发布流水线》</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:34px;padding-bottom:60px">
+    <div class="section-head">
+      <h2>现在去哪儿</h2>
+      <p>三个入口，按你当前的需要选</p>
+    </div>
+    <div class="grid c3">
+      <a class="card" href="knowledge.html" style="text-decoration:none">
+        <h3 style="margin-top:0">📚 知识点手册</h3>
+        <p class="dim small">17 个模块、百余个知识点，含必背项与命令示例，支持搜索与折叠。</p>
+      </a>
+      <a class="card" href="interview.html" style="text-decoration:none">
+        <h3 style="margin-top:0">🎯 面试题库</h3>
+        <p class="dim small">117 道分级题目，覆盖初/中/高/专家，含答题要点与提示，可随机抽题、标记掌握。</p>
+      </a>
+      <a class="card" href="resources.html" style="text-decoration:none">
+        <h3 style="margin-top:0">🔗 资源库</h3>
+        <p class="dim small">官方文档 + 中文实战文章，分 10 组，优先给第一手资料。</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap inner">
+    <span>系统实施运维学习路径 · 静态站点，可离线打开</span>
+    <span class="dim small">内容基于公开文档与社区资料整理 · 建议对照项目实践使用</span>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
