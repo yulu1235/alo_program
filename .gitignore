@@ -2,3 +2,11 @@
 Thumbs.db
 *.log
 _*
+
+# 本机上与本项目无关的内容（勿提交）
+node_modules/
+Firefly/
+ncm2audio/
+package.json
+package-lock.json
+pnpm-lock.yaml
